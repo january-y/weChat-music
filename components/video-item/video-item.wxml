@@ -1,0 +1,21 @@
+<!--components/video-item/video-item.wxml-->
+<wxs src="/utils/format.wxs" module="fmt"></wxs>
+<view>
+    <view class="cover">
+        <image
+            src="{{itemData.cover}}"
+            mode="widthFix"
+            class="cover-img"
+        />
+        <view class="footer">
+            <view class="left">
+                <view class="palyer"></view>
+                <view class="look">{{fmt.formatCount(itemData.playCount)}}</view>
+            </view>
+            <view class="right">{{fmt.formatTime(itemData.score)}}</view>
+        </view>
+    </view>
+    <view class="desc">
+        <view class="title">{{itemData.name + ' - ' + itemData.artistName}}</view>
+    </view>
+</view>
